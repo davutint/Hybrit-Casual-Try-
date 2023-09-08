@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private JoystickController joystickController;
+    [SerializeField] private PlayerAnimator PlayerAnimator;
     private CharacterController characterController;
     Vector3 moveVector;
     [SerializeField] private int moveSpeed;
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveVector.z = moveVector.y;
         moveVector.y = 0;
-
+        PlayerAnimator.ManageAnimation(moveVector);
         characterController.Move(moveVector);
     }
     private void Update()
