@@ -922,7 +922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystickOutline: {fileID: 292919227}
   joystickButton: {fileID: 562836975}
-  moveFactor: 400
+  moveFactor: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
