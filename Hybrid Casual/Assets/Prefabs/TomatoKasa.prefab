@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 3006375017735761191}
   - component: {fileID: 8771903512907332166}
   m_Layer: 0
-  m_Name: Kasa
+  m_Name: TomatoKasa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,13 +5,13 @@ using UnityEngine;
 public class BagController : MonoBehaviour
 {
     [SerializeField] private Transform bag;
-    public List<GameObject> productList;
+    public List<ProductData> productDataList;
     private Vector3 productSize;
    
 
-    public void AddProductToBag(GameObject product)
+    public void AddProductToBag(ProductData productData)
     {
-        GameObject boxProduct = Instantiate(product, Vector3.zero, Quaternion.identity);
+        GameObject boxProduct = Instantiate(productData.productPrefab, Vector3.zero, Quaternion.identity);
         boxProduct.transform.SetParent(bag, true);
         CalculateObjectSize(boxProduct);
         float yPosition = CalculateNewYPositionOfBox();
@@ -20,12 +20,12 @@ public class BagController : MonoBehaviour
         boxProduct.transform.localRotation = Quaternion.identity;
         boxProduct.transform.localPosition = Vector3.zero;
         boxProduct.transform.localPosition = new Vector3(0, yPosition, 0);
-        productList.Add(boxProduct);
+        productDataList.Add(productData);
     }
 
     private float CalculateNewYPositionOfBox()
     {
-        float newYPos = productSize.y * productList.Count;
+        float newYPos = productSize.y * productDataList.Count;
         return newYPos;
     }
 
