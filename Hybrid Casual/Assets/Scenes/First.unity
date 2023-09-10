@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 673103257}
   m_Layer: 0
   m_Name: PayerMovement
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -740,6 +740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523c9f3633d2e4d7ba339cbc61e73ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bag: {fileID: 34390851}
+  productList: []
 --- !u!1 &692807332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,3 +1385,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &5399913099318692646
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5399913099439988836, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_Name
+      value: TomatoField
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399913099439988837, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 429961ce370bb492dbd536997bb5ba0e, type: 3}
