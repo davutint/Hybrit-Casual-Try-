@@ -22,6 +22,7 @@ public class BagController : MonoBehaviour
         {
             for (int i =productDataList.Count-1;i>=0; i--)
             {
+                SelProductToShop(productDataList[i]);
                 Destroy(bag.transform.GetChild(i).gameObject);
                 productDataList.RemoveAt(i);
             }
@@ -43,6 +44,11 @@ public class BagController : MonoBehaviour
         boxProduct.transform.localPosition = new Vector3(0, yPosition, 0);
         productDataList.Add(productData);
         ControlBagCapacity();
+    }
+
+    private void SelProductToShop(ProductData productData)
+    {
+        CashManager.instance.ExchangeProduct(productData);
     }
 
     private float CalculateNewYPositionOfBox()
