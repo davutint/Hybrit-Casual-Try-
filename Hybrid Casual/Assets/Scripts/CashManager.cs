@@ -33,4 +33,25 @@ public class CashManager : MonoBehaviour
     {
         UIManager.instance.ShowCointCountOnScreen(coins);
     }
+
+    private void SpendCoin(int price)
+    {
+        coins -= price;
+        DisplayCoins();
+    }
+
+    public bool TryBuyThisUnit(int price)
+    {
+        if (GetCoins()>price)
+        {
+            SpendCoin(price);
+            return true;
+        }
+        return false;
+    }
+
+    public int GetCoins()
+    {
+        return coins;
+    }
 }
