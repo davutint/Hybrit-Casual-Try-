@@ -18,6 +18,12 @@ public class CashManager : MonoBehaviour
         else
             Destroy(instance);
     }
+
+    private void Start()
+    {
+        LoadCash();
+        DisplayCoins();
+    }
     public void AddCoin(int price)
     {
         coins += price;
@@ -32,6 +38,7 @@ public class CashManager : MonoBehaviour
     private void DisplayCoins()
     {
         UIManager.instance.ShowCointCountOnScreen(coins);
+        SaveCash();
     }
 
     private void SpendCoin(int price)
@@ -42,7 +49,7 @@ public class CashManager : MonoBehaviour
 
     public bool TryBuyThisUnit(int price)
     {
-        if (GetCoins()>price)
+        if (GetCoins()>=price)
         {
             SpendCoin(price);
             return true;
@@ -53,5 +60,15 @@ public class CashManager : MonoBehaviour
     public int GetCoins()
     {
         return coins;
+    }
+
+    private void LoadCash()
+    {
+       coins=PlayerPrefs.GetInt("keyCoins");
+    }
+
+    private void SaveCash()
+    {
+        PlayerPrefs.SetInt("keyCoins", coins);
     }
 }

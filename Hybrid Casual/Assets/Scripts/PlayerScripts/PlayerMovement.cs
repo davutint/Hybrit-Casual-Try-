@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveVector;
     [SerializeField] private int moveSpeed;
 
+    private float gravity = -9.81f;
+    private float gravityMultiplier = 3f;
+    private float gravityVelocity;
+
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -21,11 +25,29 @@ public class PlayerMovement : MonoBehaviour
 
         moveVector.z = moveVector.y;
         moveVector.y = 0;
+
         PlayerAnimator.ManageAnimation(moveVector);
+        ApplyGravity();
         characterController.Move(moveVector);
     }
     private void Update()
     {
         MovePlayer();
     }
+
+    private void ApplyGravity()
+    {
+        if (characterController.isGrounded&&gravityVelocity<0.00f)
+        {
+            gravityVelocity = -1f;
+        }
+        else
+        {
+            gravityVelocity += gravity * gravityMultiplier * Time.deltaTime;
+           
+        }
+        moveVector.y = gravityVelocity;
+    }
+
+
 }
